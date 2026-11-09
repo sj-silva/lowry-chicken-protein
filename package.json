@@ -1,0 +1,21 @@
+{
+  "name": "lowry-chicken-protein",
+  "version": "1.0.0",
+  "description": "Cuantificación de proteínas na carne de polo mediante o método de Lowry",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": ["lowry", "proteinas", "polo", "fotometrix"],
+  "author": "Aman Santana Da Silva",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "ejs": "^7.0.2",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
