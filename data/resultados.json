@@ -1,0 +1,34 @@
+{
+  "tecidos": [
+    {
+      "nome": "Fígado",
+      "mediaMgPor100mg": 5.5,
+      "desvio": 0.9,
+      "mostras": [
+        { "sesion": 1, "mgProteinaPor5g": 315.9, "mgPor100mg": 6.231 },
+        { "sesion": 2, "mgProteinaPor5g": 252.2, "mgPor100mg": 4.974 },
+        { "sesion": 3, "mgProteinaPor5g": 264.5, "mgPor100mg": 5.218 }
+      ]
+    },
+    {
+      "nome": "Músculo",
+      "mediaMgPor100mg": 4.0,
+      "desvio": 1.0,
+      "mostras": [
+        { "sesion": 1, "mgProteinaPor5g": 202.8, "mgPor100mg": 4.072 },
+        { "sesion": 2, "mgProteinaPor5g": 193.8, "mgPor100mg": 3.891 },
+        { "sesion": 3, "mgProteinaPor5g": 197.6, "mgPor100mg": 3.968 }
+      ]
+    },
+    {
+      "nome": "Pel",
+      "mediaMgPor100mg": 1.7,
+      "desvio": 0.2,
+      "mostras": [
+        { "sesion": 1, "mgProteinaPor5g": 81.49, "mgPor100mg": 1.643 },
+        { "sesion": 2, "mgProteinaPor5g": 76.92, "mgPor100mg": 1.551 },
+        { "sesion": 3, "mgProteinaPor5g": 96.56, "mgPor100mg": 1.947 }
+      ]
+    }
+  ]
+}

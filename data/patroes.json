@@ -1,0 +1,45 @@
+{
+  "sesion1": {
+    "patroes": [
+      { "nome": "Branco",   "mgProteina": 0.0, "absorbancia": 0.000 },
+      { "nome": "Patrón 1", "mgProteina": 0.1, "absorbancia": 0.163 },
+      { "nome": "Patrón 2", "mgProteina": 0.2, "absorbancia": 0.388 },
+      { "nome": "Patrón 3", "mgProteina": 0.3, "absorbancia": 0.450 },
+      { "nome": "Patrón 4", "mgProteina": 0.4, "absorbancia": 0.546 }
+    ],
+    "mostras": [
+      { "nome": "Disolución de Fígado",  "absorbancia": 0.459 },
+      { "nome": "Disolución de Músculo", "absorbancia": 0.363 },
+      { "nome": "Disolución de Pel",     "absorbancia": 0.189 }
+    ],
+    "recta": {
+      "pendente": 1.379,
+      "ordenada": 0.034,
+      "r2": 0.955,
+      "ecuacion": "f(x) = 1,379x + 0,034"
+    }
+  },
+  "sesion2": {
+    "patroes": [
+      { "nome": "Branco",   "mgProteina": 0.0, "absorbancia": 0.000 },
+      { "nome": "Patrón 1", "mgProteina": 0.1, "absorbancia": 0.170 },
+      { "nome": "Patrón 2", "mgProteina": 0.2, "absorbancia": 0.348 },
+      { "nome": "Patrón 3", "mgProteina": 0.3, "absorbancia": 0.451 },
+      { "nome": "Patrón 4", "mgProteina": 0.4, "absorbancia": 0.524 }
+    ],
+    "mostras": [
+      { "nome": "1ª Disolución de Fígado",  "absorbancia": 0.360 },
+      { "nome": "1ª Disolución de Músculo", "absorbancia": 0.336 },
+      { "nome": "1ª Disolución de Pel",     "absorbancia": 0.174 },
+      { "nome": "2ª Disolución de Fígado",  "absorbancia": 0.376 },
+      { "nome": "2ª Disolución de Músculo", "absorbancia": 0.342 },
+      { "nome": "2ª Disolución de Pel",     "absorbancia": 0.210 }
+    ],
+    "recta": {
+      "pendente": 1.329,
+      "ordenada": 0.033,
+      "r2": 0.970,
+      "ecuacion": "f(x) = 1,329x + 0,033"
+    }
+  }
+}

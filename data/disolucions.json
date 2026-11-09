@@ -1,0 +1,13 @@
+{
+  "disolucions": [
+    { "nome": "1ª Disolución de Fígado",  "mgPor01mL": 0.3082, "sobranadanteMgPor01mL": 1.541 },
+    { "nome": "1ª Disolución de Músculo", "mgPor01mL": 0.2386, "sobranadanteMgPor01mL": 1.193 },
+    { "nome": "1ª Disolución de Pel",     "mgPor01mL": 0.1124, "sobranadanteMgPor01mL": 0.5620 },
+    { "nome": "2ª Disolución de Fígado",  "mgPor01mL": 0.2460, "sobranadanteMgPor01mL": 1.230 },
+    { "nome": "2ª Disolución de Músculo", "mgPor01mL": 0.2280, "sobranadanteMgPor01mL": 1.140 },
+    { "nome": "2ª Disolución de Pel",     "mgPor01mL": 0.1061, "sobranadanteMgPor01mL": 0.5305 },
+    { "nome": "3ª Disolución de Fígado",  "mgPor01mL": 0.2581, "sobranadanteMgPor01mL": 1.290 },
+    { "nome": "3ª Disolución de Músculo", "mgPor01mL": 0.2325, "sobranadanteMgPor01mL": 1.163 },
+    { "nome": "3ª Disolución de Pel",     "mgPor01mL": 0.1332, "sobranadanteMgPor01mL": 0.6659 }
+  ]
+}

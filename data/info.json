@@ -1,0 +1,35 @@
+{
+  "titulo": "Cuantificación de Proteínas na Carne de Polo utilizando o Método de Lowry",
+  "tituloCurto": "Cuantificación de proteínas — Lowry",
+  "autor": "Aman Santana Da Silva",
+  "centro": "IES Lucus Augusti",
+  "curso": "2024/2025",
+  "agradecementos": [
+    "Á profesora do IES Lucus Augusti Belén Reija Otero por colaborar na planificación deste traballo, así como no desenvolvemento da súa parte experimental e na edición da memoria.",
+    "Aos profesores da USC Mercedes Novo Rodríguez e Wajih Al-Soufi por colaboraren na planificación do proxecto e na edición da memoria."
+  ],
+  "bibliografia": [
+    {
+      "titulo": "What are proteins and what do they do?",
+      "fonte": "Medlineplus.gov",
+      "url": "https://medlineplus.gov/genetics/understanding/howgeneswork/protein/"
+    },
+    {
+      "titulo": "Método de Lowry: Validação e Estimativa do cálculo de incerteza",
+      "fonte": "Flávia Regina dos Santos. Dissertação (mestrado) — Universidade Estadual Paulista, Faculdade de Ciências Farmacêuticas, 2012."
+    },
+    {
+      "titulo": "Determinación de proteínas en hojas de Citrus. I. Métodos e interferencias.",
+      "fonte": "A.L. García y J. Sánchez-Rojas, Anales de la Universidad de Murcia. Vol XLIII; Núms 1-4, 1984."
+    },
+    {
+      "titulo": "Dumas or Kjeldahl for reference analysis? Comparison and considerations for Nitrogen/Protein analysis of food and feed",
+      "fonte": "Dr. Jürgen Müller — FOSS Analytics Beyond Measure, 2017."
+    },
+    {
+      "titulo": "Fotometrix — XuvenCiencia",
+      "fonte": "https://xuvenciencia.org/portal/xc-na-aula/fotometrix/",
+      "url": "https://xuvenciencia.org/portal/xc-na-aula/fotometrix/"
+    }
+  ]
+}
