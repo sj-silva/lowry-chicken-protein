@@ -1,0 +1,164 @@
+<article>
+  <h1 class="display-6 fw-semibold mb-2">Resultados</h1>
+  <p class="lead text-body-secondary">Absorbancias, rectas de calibrado e concentración de proteínas por tecido.</p>
+
+  <section>
+    <h2>1. Absorbancias dos patróns e das mostras</h2>
+
+    <h3>Sesión 1</h3>
+    <div class="table-responsive">
+      <table class="table table-striped table-sm taboa-resultados align-middle">
+        <thead class="table-light">
+          <tr><th>Mostra</th><th>mg proteína</th><th>Absorbancia</th></tr>
+        </thead>
+        <tbody>
+          <% page.patroes.sesion1.patroes.forEach(p => { %>
+            <tr>
+              <td><%= p.nome %></td>
+              <td><%= p.mgProteina.toFixed(1) %></td>
+              <td><%= p.absorbancia.toFixed(3) %></td>
+            </tr>
+          <% }) %>
+          <% page.patroes.sesion1.mostras.forEach(m => { %>
+            <tr>
+              <td><em><%= m.nome %></em></td>
+              <td>—</td>
+              <td><%= m.absorbancia.toFixed(3) %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">
+      Recta de calibrado: <strong><%= page.patroes.sesion1.recta.ecuacion %></strong>
+      (R² = <%= page.patroes.sesion1.recta.r2 %>).
+    </p>
+
+    <h3>Sesión 2</h3>
+    <div class="table-responsive">
+      <table class="table table-striped table-sm taboa-resultados align-middle">
+        <thead class="table-light">
+          <tr><th>Mostra</th><th>mg proteína</th><th>Absorbancia</th></tr>
+        </thead>
+        <tbody>
+          <% page.patroes.sesion2.patroes.forEach(p => { %>
+            <tr>
+              <td><%= p.nome %></td>
+              <td><%= p.mgProteina.toFixed(1) %></td>
+              <td><%= p.absorbancia.toFixed(3) %></td>
+            </tr>
+          <% }) %>
+          <% page.patroes.sesion2.mostras.forEach(m => { %>
+            <tr>
+              <td><em><%= m.nome %></em></td>
+              <td>—</td>
+              <td><%= m.absorbancia.toFixed(3) %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">
+      Recta de calibrado: <strong><%= page.patroes.sesion2.recta.ecuacion %></strong>
+      (R² = <%= page.patroes.sesion2.recta.r2 %>).
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Concentración das disolucións problema (dilución 1:5)</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-sm taboa-resultados align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>Disolución</th>
+            <th>mg/0,1 mL (diluída)</th>
+            <th>mg/0,1 mL (sobrenadante)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% page.disolucions.disolucions.forEach(d => { %>
+            <tr>
+              <td><%= d.nome %></td>
+              <td><%= d.mgPor01mL.toFixed(4) %></td>
+              <td><%= d.sobranadanteMgPor01mL.toFixed(3) %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Contido de proteína por tecido</h2>
+    <div class="row g-3">
+      <% page.resultados.tecidos.forEach(t => { %>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title"><%= t.nome %></h3>
+              <p class="display-6 mb-1"><%= t.mediaMgPor100mg %> <small class="fs-6 text-body-secondary">mg / 100 mg</small></p>
+              <p class="muted mb-0">Desviación típica: ± <%= t.desvio %></p>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+
+    <h3 class="mt-4">Detalle por sesión</h3>
+    <div class="table-responsive">
+      <table class="table table-striped table-sm taboa-resultados align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>Tecido</th>
+            <th>Sesión</th>
+            <th>mg proteína (mostra 5 g)</th>
+            <th>mg / 100 mg tecido</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% page.resultados.tecidos.forEach(t => { %>
+            <% t.mostras.forEach(m => { %>
+              <tr>
+                <td><%= t.nome %></td>
+                <td><%= m.sesion %></td>
+                <td><%= m.mgProteinaPor5g.toFixed(2) %></td>
+                <td><%= m.mgPor100mg.toFixed(3) %></td>
+              </tr>
+            <% }) %>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <figure class="figura">
+      <img src="/img/figura7.jpg" alt="Gráfico de barras coa concentración de proteína por 100 mg de tecido" class="img-fluid">
+      <figcaption><strong>Figura 7.</strong> Concentración de proteína por 100 mg de mostra para cada un dos tecidos de polo.</figcaption>
+    </figure>
+
+    <figure class="figura">
+      <img src="/img/figura5.jpg" alt="Recta de calibrado da sesión 1" class="img-fluid">
+      <figcaption><strong>Figura 5.</strong> Recta de calibrado da sesión 1 (absorbancia fronte a cantidade de proteína).</figcaption>
+    </figure>
+
+    <figure class="figura">
+      <img src="/img/figura6.jpg" alt="Recta de calibrado da sesión 2" class="img-fluid">
+      <figcaption><strong>Figura 6.</strong> Recta de calibrado da sesión 2.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>4. Análise</h2>
+    <p>
+      A concentración de miligramos de proteína por cada 100 miligramos de fígado é de 5,5 mg; a de
+      músculo, de 4,0 mg; a de pel, 1,7 mg. A desviación típica é de 0,9, 1,0 e 0,2 respectivamente, o
+      que significa que os resultados da pel son os que máis coinciden uns con outros e os do músculo son
+      os máis distintos entre si.
+    </p>
+    <div class="callout">
+      <strong>Conclusión estatística:</strong> non podemos dicir que haxa diferenzas significativas en
+      canto a contido de proteína entre o fígado e o músculo, xa que se superpoñen os resultados dentro
+      dun valor da desviación típica. Pola contra, o que podemos afirmar é que o contido en proteínas da
+      pel do polo é significativamente menor á do fígado e músculo de polo.
+    </div>
+  </section>
+</article>

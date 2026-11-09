@@ -1,0 +1,48 @@
+<article>
+  <h1 class="display-6 fw-semibold mb-2">Conclusións</h1>
+  <p class="lead text-body-secondary">Síntese dos resultados, limitacións e vías futuras.</p>
+
+  <section>
+    <h2>Conclusións</h2>
+    <p>
+      A aplicación do método de Lowry desta forma abre porta, sen ningunha dúbida, a un gran número de
+      usos interesantes. Poderiamos, por exemplo, verificar se o que anuncian os produtos sobre a súa
+      concentración en proteínas é verdadeira ou non. Ou quizais poderiamos intentar responder á
+      pregunta de se os alimentos de orixe vexetal teñen unha concentración igual en proteínas a outros
+      produtos similares de orixe animal.
+    </p>
+    <p>
+      Mesmo poderiamos mellorar este proxecto mediante a impresión 3D dun novo fotómetro ou o cambio do
+      software deste por outro máis eficaz á hora de facer os cálculos (daríanos non só a absorbancia,
+      senón directamente a concentración despois de inserirmos algúns datos).
+    </p>
+    <p>
+      Grazas ao método de Lowry, son múltiples os novos proxectos de gran importancia que podemos levar
+      a cabo cunha gran exactitude — todos a baixo custo e sen necesidade de equipamentos de difícil
+      manexo, nin de cálculos de gran complexidade.
+    </p>
+  </section>
+
+  <section>
+    <h2>Agradecementos</h2>
+    <ul>
+      <% page.info.agradecementos.forEach(a => { %>
+        <li><%= a %></li>
+      <% }) %>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Bibliografía e webgrafía</h2>
+    <ol>
+      <% page.info.bibliografia.forEach(b => { %>
+        <li>
+          "<%= b.titulo %>" — <%= b.fonte %>
+          <% if (b.url) { %>
+            — <a href="<%= b.url %>" target="_blank" rel="noopener"><%= b.url %></a>
+          <% } %>
+        </li>
+      <% }) %>
+    </ol>
+  </section>
+</article>

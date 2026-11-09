@@ -1,0 +1,84 @@
+/* ============================================================
+   Axustes propios sobre Bootstrap 5.3
+   ============================================================ */
+
+/* ---------- Header ---------- */
+.site-header {
+  background: #0f172a;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+.site-header .navbar { padding-top: .65rem; padding-bottom: .65rem; }
+.site-header .navbar-brand { color: #e2e8f0; }
+.site-header .navbar-brand:hover { color: #fff; }
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: .5rem;
+  background: #1d4ed8;
+  color: #fff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.brand-mark + span small { font-size: .72rem; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #0f172a;
+  color: #94a3b8;
+  font-size: .9rem;
+}
+.site-footer strong { color: #e2e8f0; }
+.site-footer .text-body-secondary { color: #94a3b8 !important; }
+
+/* ---------- Tipografía ---------- */
+h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 .75rem;
+  padding-bottom: .35rem;
+  border-bottom: 2px solid var(--bs-border-color);
+}
+h3 { font-size: 1.15rem; margin: 1.5rem 0 .5rem; }
+
+/* ---------- Táboas de resultados ---------- */
+.taboa-resultados th,
+.taboa-resultados td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.taboa-resultados th:first-child,
+.taboa-resultados td:first-child { text-align: left; }
+
+/* ---------- Figuras ---------- */
+figure.figura {
+  margin: 1.5rem 0;
+}
+figure.figura img {
+  border-radius: .5rem;
+  border: 1px solid var(--bs-border-color);
+  background: #fff;
+}
+figure.figura figcaption {
+  font-size: .875rem;
+  color: var(--bs-secondary-color);
+  margin-top: .5rem;
+  text-align: center;
+}
+
+/* ---------- Gráficos Chart.js (Etapa 11) ---------- */
+.chart-wrap {
+  position: relative;
+  height: 320px;
+  background: #fff;
+  border: 1px solid var(--bs-border-color);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+/* ---------- Misc ---------- */
+.muted { color: var(--bs-secondary-color); }

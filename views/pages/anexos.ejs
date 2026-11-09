@@ -1,0 +1,48 @@
+<article>
+  <h1 class="display-6 fw-semibold mb-2">Anexos</h1>
+  <p class="lead text-body-secondary">Táboas completas de datos experimentais.</p>
+
+  <section>
+    <h2>Táboa 1 — Sesión 1: patróns e mostras</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm taboa-resultados align-middle">
+        <thead class="table-light">
+          <tr><th>Mostra</th><th>mg proteína</th><th>Absorbancia</th></tr>
+        </thead>
+        <tbody>
+          <% page.patroes.sesion1.patroes.forEach(p => { %>
+            <tr><td><%= p.nome %></td><td><%= p.mgProteina %></td><td><%= p.absorbancia %></td></tr>
+          <% }) %>
+          <% page.patroes.sesion1.mostras.forEach(m => { %>
+            <tr><td><%= m.nome %></td><td>—</td><td><%= m.absorbancia %></td></tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Táboa 2 — Sesión 2: patróns e mostras</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm taboa-resultados align-middle">
+        <thead class="table-light">
+          <tr><th>Mostra</th><th>mg proteína</th><th>Absorbancia</th></tr>
+        </thead>
+        <tbody>
+          <% page.patroes.sesion2.patroes.forEach(p => { %>
+            <tr><td><%= p.nome %></td><td><%= p.mgProteina %></td><td><%= p.absorbancia %></td></tr>
+          <% }) %>
+          <% page.patroes.sesion2.mostras.forEach(m => { %>
+            <tr><td><%= m.nome %></td><td>—</td><td><%= m.absorbancia %></td></tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Táboa 3 — Concentración das disolucións problema</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-sm taboa-resultados align-middle">
+        <thead class="table-light">
+          <tr><th>Disolución</th><th>mg/0

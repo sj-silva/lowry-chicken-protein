@@ -10,23 +10,61 @@ app.set('view engine', 'ejs');
 app.set('views', viewsDir);
 app.use(express.static(publicDir));
 
-// Helper: ler JSON do disco (compatible con calquera versión de Node)
 const lerJSON = (nome) =>
   JSON.parse(readFileSync(path.join(dataDir, nome), 'utf-8'));
 
-// Rota de depuración (retirar en produción)
-app.get('/_debug', (req, res) => {
-  res.json({
-    info:        lerJSON('info.json'),
-    patroes:     lerJSON('patroes.json'),
-    disolucions: lerJSON('disolucions.json'),
-    resultados:  lerJSON('resultados.json')
+const info = () => lerJSON('info.json');
+
+const renderPage = (res, opts) => {
+  res.render('layout', {
+    page: {
+      conteudo: opts.conteudo,
+      activo:   opts.activo,
+      titulo:   opts.titulo || '',
+      info:     info(),
+      ...opts.extra
+    }
+  });
+};
+
+app.get('/', (req, res) => {
+  renderPage(res, { conteudo: 'pages/index', activo: 'inicio', titulo: '' });
+});
+
+app.get('/materiais', (req, res) => {
+  renderPage(res, { conteudo: 'pages/materiais', activo: 'materiais', titulo: 'Materiais e métodos' });
+});
+
+app.get('/resultados', (req, res) => {
+  renderPage(res, {
+    conteudo: 'pages/resultados',
+    activo:   'resultados',
+    titulo:   'Resultados',
+    extra: {
+      patroes:     lerJSON('patroes.json'),
+      disolucions: lerJSON('disolucions.json'),
+      resultados:  lerJSON('resultados.json')
+    }
   });
 });
 
-app.get('/', (req, res) => {
-  res.render('index', { titulo: 'Inicio' });
+app.get('/conclusions', (req, res) => {
+  renderPage(res, { conteudo: 'pages/conclusions', activo: 'conclusions', titulo: 'Conclusións' });
 });
+
+app.get('/anexos', (req, res) => {
+  renderPage(res, {
+    conteudo: 'pages/anexos',
+    activo:   'anexos',
+    titulo:   'Anexos',
+    extra: {
+      patroes:     lerJSON('patroes.json'),
+      disolucions: lerJSON('disolucions.json'),
+      resultados:  lerJSON('resultados.json')
+    }
+  });
+});
+
 
 app.listen(PORT, () => {
   console.log(`Servidor en http://localhost:${PORT}`);

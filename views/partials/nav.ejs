@@ -1,0 +1,29 @@
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <span class="brand-mark">L</span>
+        <span class="d-flex flex-column lh-1">
+          <strong><%= page.info.tituloCurto %></strong>
+          <small class="opacity-75"><%= page.info.autor %> · <%= page.info.centro %></small>
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMain"
+              aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link <%= page.activo === 'inicio'      ? 'active' : '' %>" href="/">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link <%= page.activo === 'materiais'   ? 'active' : '' %>" href="/materiais">Materiais</a></li>
+          <li class="nav-item"><a class="nav-link <%= page.activo === 'resultados'  ? 'active' : '' %>" href="/resultados">Resultados</a></li>
+          <li class="nav-item"><a class="nav-link <%= page.activo === 'conclusions' ? 'active' : '' %>" href="/conclusions">Conclusións</a></li>
+          <li class="nav-item"><a class="nav-link <%= page.activo === 'anexos'      ? 'active' : '' %>" href="/anexos">Anexos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
