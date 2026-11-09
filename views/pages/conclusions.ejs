@@ -1,9 +1,11 @@
 <article>
-  <h1 class="display-6 fw-semibold mb-2">Conclusións</h1>
-  <p class="lead text-body-secondary">Síntese dos resultados, limitacións e vías futuras.</p>
+  <header class="mb-4">
+    <h1 class="display-6 fw-semibold mb-2">Conclusións</h1>
+    <p class="lead text-body-secondary mb-0">Síntese dos resultados, limitacións e vías futuras.</p>
+  </header>
 
-  <section>
-    <h2>Conclusións</h2>
+  <!-- Texto principal sem o h2 redundante -->
+  <div class="mb-5">
     <p>
       A aplicación do método de Lowry desta forma abre porta, sen ningunha dúbida, a un gran número de
       usos interesantes. Poderiamos, por exemplo, verificar se o que anuncian os produtos sobre a súa
@@ -16,18 +18,18 @@
       software deste por outro máis eficaz á hora de facer os cálculos (daríanos non só a absorbancia,
       senón directamente a concentración despois de inserirmos algúns datos).
     </p>
-    <p>
+    <p class="mb-0">
       Grazas ao método de Lowry, son múltiples os novos proxectos de gran importancia que podemos levar
       a cabo cunha gran exactitude — todos a baixo custo e sen necesidade de equipamentos de difícil
       manexo, nin de cálculos de gran complexidade.
     </p>
-  </section>
+  </div>
 
   <section>
     <h2>Agradecementos</h2>
     <ul>
       <% page.info.agradecementos.forEach(a => { %>
-        <li><%= a %></li>
+        <li class="mb-2"><%= a %></li>
       <% }) %>
     </ul>
   </section>
@@ -36,10 +38,10 @@
     <h2>Bibliografía e webgrafía</h2>
     <ol>
       <% page.info.bibliografia.forEach(b => { %>
-        <li>
+        <li class="mb-3">
           "<%= b.titulo %>" — <%= b.fonte %>
           <% if (b.url) { %>
-            — <a href="<%= b.url %>" target="_blank" rel="noopener"><%= b.url %></a>
+            <br><a href="<%= b.url %>" target="_blank" rel="noopener"><%= b.url %></a>
           <% } %>
         </li>
       <% }) %>
