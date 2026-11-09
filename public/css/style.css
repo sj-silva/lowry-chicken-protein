@@ -103,12 +103,15 @@ figure.figura figcaption {
 /* ---------- Gráficos Chart.js (Etapa 11) ---------- */
 .chart-wrap {
   position: relative;
-  height: 320px;
+  height: 420px; /* Aumentei ligeiramente para a legenda respirar */
   background: #fff;
   border: 1px solid var(--bs-border-color);
   border-radius: .5rem;
-  padding: 1rem;
+  padding: 1rem 1rem 2.5rem 1rem; /* Mais espaço em baixo para a legenda */
+  margin: 0 auto;
+  max-width: 800px;
 }
+
 
 /* ---------- Misc ---------- */
 .muted { color: var(--bs-secondary-color); }

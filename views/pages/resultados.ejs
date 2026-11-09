@@ -130,20 +130,38 @@
       </table>
     </div>
 
+       <h3 class="mt-4">Gráfico comparativo por tecido</h3>
     <figure class="figura">
-      <img src="/img/figura7.jpg" alt="Gráfico de barras coa concentración de proteína por 100 mg de tecido" class="img-fluid">
-      <figcaption><strong>Figura 7.</strong> Concentración de proteína por 100 mg de mostra para cada un dos tecidos de polo.</figcaption>
+      <div class="chart-wrap">
+        <canvas id="graficoBarras"></canvas>
+      </div>
+      <figcaption><strong>Figura 7.</strong> Concentración de proteína por 100 mg de mostra para cada un dos tecidos de polo (media ± desvío típico).</figcaption>
     </figure>
 
+    <h3 class="mt-4">Recta de calibrado — Sesión 1</h3>
     <figure class="figura">
-      <img src="/img/figura5.jpg" alt="Recta de calibrado da sesión 1" class="img-fluid">
-      <figcaption><strong>Figura 5.</strong> Recta de calibrado da sesión 1 (absorbancia fronte a cantidade de proteína).</figcaption>
+      <div class="chart-wrap">
+        <canvas id="graficoRecta1"></canvas>
+      </div>
+      <figcaption><strong>Figura 5.</strong> Absorbancia fronte á cantidade de proteína. Axuste lineal segundo a lei de Lambert-Beer (Sesión 1).</figcaption>
     </figure>
 
+    <h3 class="mt-4">Recta de calibrado — Sesión 2</h3>
     <figure class="figura">
-      <img src="/img/figura6.jpg" alt="Recta de calibrado da sesión 2" class="img-fluid">
-      <figcaption><strong>Figura 6.</strong> Recta de calibrado da sesión 2.</figcaption>
+      <div class="chart-wrap">
+        <canvas id="graficoRecta2"></canvas>
+      </div>
+      <figcaption><strong>Figura 6.</strong> Absorbancia fronte á cantidade de proteína. Axuste lineal segundo a lei de Lambert-Beer (Sesión 2).</figcaption>
     </figure>
+
+    <%# Pasa os datos ao JavaScript do cliente %>
+    <script>
+      window.__dados = {
+        patroes:     <%- JSON.stringify(page.patroes) %>,
+        resultados:  <%- JSON.stringify(page.resultados) %>
+      };
+    </script>
+    <script src="/js/charts.js" defer></script>
   </section>
 
   <section>
